@@ -97,10 +97,37 @@ const config: Config = {
             height: "0",
           },
         },
+        "pulse-slow": {
+          "0%, 100%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0.7",
+          },
+        },
+        "fade-in": {
+          from: {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-slow": "pulse-slow 4s ease-in-out infinite",
+        "fade-in": "fade-in 0.6s ease-out forwards",
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+      boxShadow: {
+        'glow': '0 0 15px 2px rgba(255, 255, 255, 0.1)',
+        'glow-sm': '0 0 10px 1px rgba(255, 255, 255, 0.05)',
       },
     },
   },
